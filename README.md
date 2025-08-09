@@ -26,6 +26,8 @@
 
 - [Quickstart](https://flask.palletsprojects.com/en/stable/quickstart/)
 
+- [Jinja2 - Template Designer Documentation](https://jinja.palletsprojects.com/en/stable/templates/)
+
 - [Tutorial](https://flask.palletsprojects.com/en/stable/tutorial/)
 
 - [User's Guide](https://flask.palletsprojects.com/en/stable/#user-s-guide)
