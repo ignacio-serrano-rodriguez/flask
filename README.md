@@ -1,31 +1,5 @@
 # Flask
 
-## Official Documentation
-
-1. [Installation](https://flask.palletsprojects.com/en/stable/installation/)
-
-2. [Quickstart](https://flask.palletsprojects.com/en/stable/quickstart/)
-
-3. [Tutorial](https://flask.palletsprojects.com/en/stable/tutorial/)
-
-4. [Patterns](https://flask.palletsprojects.com/en/stable/patterns/)
-
-5. [API](https://flask.palletsprojects.com/en/stable/api/)
-
-6. <u>Main dependencies</u>
-
-   - [Werkzeug - WSGI toolkit](https://werkzeug.palletsprojects.com/en/stable/)
-   - [Jinja - Template engine](https://jinja.palletsprojects.com/en/stable/)
-   - [Click - CLI toolkit](https://click.palletsprojects.com/en/stable/)
-
-7. [User's Guide](https://flask.palletsprojects.com/en/stable/#user-s-guide)
-
-8. [API Reference](https://flask.palletsprojects.com/en/stable/#api-reference)
-
-9. [Additional Notes](https://flask.palletsprojects.com/en/stable/#additional-notes)
-
-10. [Deploying to Production](https://flask.palletsprojects.com/en/stable/deploying/)
-
 ## Useful commands
 
   - `flask --app "filename".py run`
@@ -45,3 +19,33 @@
     - Automatic reloading when code changes
     - Detailed error messages in the browser
     - Interactive debugger for troubleshooting
+
+## Official Documentation
+
+- [Installation](https://flask.palletsprojects.com/en/stable/installation/)
+
+- [Quickstart](https://flask.palletsprojects.com/en/stable/quickstart/)
+
+- [Tutorial](https://flask.palletsprojects.com/en/stable/tutorial/)
+
+- [User's Guide](https://flask.palletsprojects.com/en/stable/#user-s-guide)
+
+- [CLI](https://flask.palletsprojects.com/en/stable/cli/)
+
+- [Development Server](https://flask.palletsprojects.com/en/stable/server/)
+
+- [API Reference](https://flask.palletsprojects.com/en/stable/#api-reference)
+
+- [Deploying to Production](https://flask.palletsprojects.com/en/stable/deploying/)
+
+- More
+
+  - [Patterns](https://flask.palletsprojects.com/en/stable/patterns/)
+  - [API](https://flask.palletsprojects.com/en/stable/api/)
+  - [Additional Notes](https://flask.palletsprojects.com/en/stable/#additional-notes)
+
+- Main dependencies
+
+   - [Werkzeug - WSGI toolkit](https://werkzeug.palletsprojects.com/en/stable/)
+   - [Jinja - Template engine](https://jinja.palletsprojects.com/en/stable/)
+   - [Click - CLI toolkit](https://click.palletsprojects.com/en/stable/)
