@@ -36,31 +36,40 @@ def user_username(username):
 #     print(url_for('login', next='/'))
 #     print(url_for('user_username', username='John Doe'))
     
-def do_the_login():
-    return("\"do_the_login\" function")
+def valid_login(username, password):
+    valid = False
+    if username != password:
+        valid = True
+    else:
+        valid = False
+    return(valid)
     
-def show_the_login_form():
-    return("\"show_the_login_form\" function")
+def log_the_user_in(username):
+    return render_template('hello.html', person=username)
     
     
 # HTTP Methods options ----------------------------------
 
 # Option 1
-# @app.route('/login/', methods=['GET', 'POST'])
-# def login():
-#     if request.method == 'POST':
-#         return do_the_login()
-#     else:
-#         return show_the_login_form()
-    
-# Option 2
-@app.get('/login/')
-def login_get():
-    return show_the_login_form()
+# @app.get('/login/')
+# def login_get():
+#     return valid_login()
 
-@app.post('/login/')
-def login_post():
-    return do_the_login()
+# @app.post('/login/')
+# def login_post():
+#     return log_the_user_in()
+
+# Option 2
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if 'username' in request.form and 'password' in request.form:
+            if valid_login(request.form['username'], request.form['password']):
+                return log_the_user_in(request.form['username'])
+            else:
+                error = 'Invalid username/password'
+    return render_template('login.html', error=error)
 
 # -------------------------------------------------------   
 
