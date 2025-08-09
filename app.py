@@ -1,6 +1,7 @@
 from flask import Flask
-from markupsafe import escape
 from flask import url_for
+from flask import request
+from markupsafe import escape
 
 app = Flask(__name__)
 
@@ -32,16 +33,25 @@ def projects():
 def about():
     return 'The about page'
 
-@app.route('/login')
-def login():
-    return 'login'
-
 @app.route('/user/<username>')
 def user_username(username):
     return f'{username}\'s profile'
 
-with app.test_request_context():
-    print(url_for('index'))
-    print(url_for('login'))
-    print(url_for('login', next='/'))
-    print(url_for('user_username', username='John Doe'))
+# with app.test_request_context():
+#     print(url_for('index'))
+#     print(url_for('login'))
+#     print(url_for('login', next='/'))
+#     print(url_for('user_username', username='John Doe'))
+    
+def do_the_login():
+    return("\"do_the_login\" function")
+    
+def show_the_login_form():
+    return("\"show_the_login_form\" function")
+    
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        return do_the_login()
+    else:
+        return show_the_login_form()
