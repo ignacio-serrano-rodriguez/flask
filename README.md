@@ -24,6 +24,8 @@
 
 9. [Additional Notes](https://flask.palletsprojects.com/en/stable/#additional-notes)
 
+10. [Deploying to Production](https://flask.palletsprojects.com/en/stable/deploying/)
+
 ## Useful commands
 
   - `flask --app "filename".py run`
