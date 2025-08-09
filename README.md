@@ -26,18 +26,18 @@
 
 ## Useful commands
 
-  - **flask --app "filename".py run**
+  - `flask --app "filename".py run`
 
     Explicitly specifies which Python file contains your Flask application and runs it. This command is useful when:
     - Your Flask app file is not named `app.py` or `wsgi.py` (Flask's default names)
     - You have multiple Flask applications in the same directory
     - You want to be explicit about which file to run
 
-  - **flask run**
+  - `flask run`
 
     Starts the Flask development server. This command runs your Flask application locally, making it accessible at `http://127.0.0.1:5000` by default.
 
-  - **flask run --debug**
+  - `flask run --debug`
 
     Starts the Flask development server with debug mode enabled. Debug mode provides:
     - Automatic reloading when code changes
