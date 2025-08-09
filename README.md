@@ -1,5 +1,7 @@
 # Flask
 
+## Official Documentation
+
 1. [Installation](https://flask.palletsprojects.com/en/stable/installation/)
 
 2. [Quickstart](https://flask.palletsprojects.com/en/stable/quickstart/)
@@ -21,3 +23,16 @@
 8. [API Reference](https://flask.palletsprojects.com/en/stable/#api-reference)
 
 9. [Additional Notes](https://flask.palletsprojects.com/en/stable/#additional-notes)
+
+## Useful commands
+
+   - **flask run**
+   
+     Starts the Flask development server. This command runs your Flask application locally, making it accessible at `http://127.0.0.1:5000` by default.
+
+   - **flask run --debug**
+   
+     Starts the Flask development server with debug mode enabled. Debug mode provides:
+     - Automatic reloading when code changes
+     - Detailed error messages in the browser
+     - Interactive debugger for troubleshooting
