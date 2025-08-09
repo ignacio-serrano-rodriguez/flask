@@ -27,6 +27,7 @@
 - [Quickstart](https://flask.palletsprojects.com/en/stable/quickstart/)
 
 - [Jinja2 - Template Designer Documentation](https://jinja.palletsprojects.com/en/stable/templates/)
+  - [Template Inheritance](https://flask.palletsprojects.com/en/stable/patterns/templateinheritance/)
 
 - [Tutorial](https://flask.palletsprojects.com/en/stable/tutorial/)
 

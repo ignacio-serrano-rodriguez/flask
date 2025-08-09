@@ -1,1 +1,7 @@
-<p>Hello user!</p>
+<!doctype html>
+<title>Hello from Flask</title>
+{% if person %}
+  <h1>Hello user {{ person }}!</h1>
+{% else %}
+  <h1>Hello user! I don't know your name.</h1>
+{% endif %}
