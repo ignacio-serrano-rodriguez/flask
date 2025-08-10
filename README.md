@@ -1,4 +1,7 @@
-# Flask
+# Flask Project
+- **Python version:** 3.13.5
+- **Package manager systems:** [miniconda3](https://www.anaconda.com/docs/getting-started/miniconda/main) + [PyPI](https://pypi.org/)
+- [**Requirements file**](https://github.com/ignacio-serrano-rodriguez/flask/blob/main/requirements.txt)
 
 ## 1. Useful CLI commands
 
