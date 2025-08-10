@@ -38,10 +38,8 @@ def user_username(username):
     
 def valid_login(username, password):
     valid = False
-    if username != password:
+    if username == password:
         valid = True
-    else:
-        valid = False
     return(valid)
     
 def log_the_user_in(username):
@@ -60,15 +58,18 @@ def log_the_user_in(username):
 #     return log_the_user_in()
 
 # Option 2
-@app.route('/login/', methods=['GET', 'POST'])
+@app.route('/login/', methods=['POST'])
 def login():
     error = None
-    if request.method == 'POST':
-        if 'username' in request.form and 'password' in request.form:
-            if valid_login(request.form['username'], request.form['password']):
-                return log_the_user_in(request.form['username'])
-            else:
-                error = 'Invalid username/password'
+    
+    if 'username' not in request.form or 'password' not in request.form:
+        error = 'Username and password are required'
+    elif not request.form['username'] or not request.form['password']:
+        error = 'Username and password cannot be empty'
+    elif valid_login(request.form['username'], request.form['password']):
+        return log_the_user_in(request.form['username'])
+    else:
+        error = 'Invalid username or password'
     return render_template('login.html', error=error)
 
 # -------------------------------------------------------   
