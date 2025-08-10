@@ -1,27 +1,30 @@
 # Flask
 
-## 1. Useful commands
+## 1. Useful CLI commands
 
-  - `flask --app "filename".py run`
+- [Official Documentation](https://flask.palletsprojects.com/en/stable/cli/)
+  - [Click - CLI toolkit (Main dependency)](https://click.palletsprojects.com/en/stable/)
 
-    Explicitly specifies which Python file contains your Flask application and runs it. This command is useful when:
-    - Your Flask app file is not named `app.py` or `wsgi.py` (Flask's default names)
-    - You have multiple Flask applications in the same directory
-    - You want to be explicit about which file to run
+- `flask --app "filename".py run`
 
-  - `flask run`
+  Explicitly specifies which Python file contains your Flask application and runs it. This command is useful when:
+  - Your Flask app file is not named `app.py` or `wsgi.py` (Flask's default names)
+  - You have multiple Flask applications in the same directory
+  - You want to be explicit about which file to run
 
-    Starts the Flask development server. This command runs your Flask application locally, making it accessible at `http://127.0.0.1:5000` by default.
+- `flask run`
 
-  - `flask run --debug`
+  Starts the Flask development server. This command runs your Flask application locally, making it accessible at `http://127.0.0.1:5000` by default.
 
-    Starts the Flask development server with debug mode enabled. Debug mode provides:
-    - **Automatic reloading**: Server restarts automatically when you save code changes
-    - **Detailed error pages**: Shows full stack traces and exact error locations in the browser
-    - **Interactive debugger**: Click on traceback lines to open a Python console (requires PIN)
-    - **Enhanced logging**: More verbose output in the terminal
-    
-    **Security Warning**: Never use debug mode in production! The interactive debugger allows code execution.
+- `flask run --debug`
+
+  Starts the Flask development server with debug mode enabled. Debug mode provides:
+  - **Automatic reloading**: Server restarts automatically when you save code changes
+  - **Detailed error pages**: Shows full stack traces and exact error locations in the browser
+  - **Interactive debugger**: Click on traceback lines to open a Python console (requires PIN)
+  - **Enhanced logging**: More verbose output in the terminal
+  
+  **Security Warning**: Never use debug mode in production! The interactive debugger allows code execution.
 
 ## 2. API Debugging Tool
 
@@ -78,14 +81,13 @@
 
 - [Jinja2 - Template Designer Documentation](https://jinja.palletsprojects.com/en/stable/templates/)
   - [Template Inheritance](https://flask.palletsprojects.com/en/stable/patterns/templateinheritance/)
+  - [Jinja - Template engine (Main dependency)](https://jinja.palletsprojects.com/en/stable/)
 
-- [SQLAlchemy in Flask](https://flask.palletsprojects.com/en/stable/patterns/sqlalchemy/)
+- [SQLAlchemy](https://flask.palletsprojects.com/en/stable/patterns/sqlalchemy/)
 
 - [Tutorial](https://flask.palletsprojects.com/en/stable/tutorial/)
 
 - [User's Guide](https://flask.palletsprojects.com/en/stable/#user-s-guide)
-
-- [CLI](https://flask.palletsprojects.com/en/stable/cli/)
 
 - [Development Server](https://flask.palletsprojects.com/en/stable/server/)
 
@@ -96,9 +98,4 @@
   - [Patterns](https://flask.palletsprojects.com/en/stable/patterns/)
   - [API](https://flask.palletsprojects.com/en/stable/api/)
   - [Additional Notes](https://flask.palletsprojects.com/en/stable/#additional-notes)
-
-- Main dependencies
-
-   - [Werkzeug - WSGI toolkit](https://werkzeug.palletsprojects.com/en/stable/)
-   - [Jinja - Template engine](https://jinja.palletsprojects.com/en/stable/)
-   - [Click - CLI toolkit](https://click.palletsprojects.com/en/stable/)
+  - [Werkzeug - WSGI toolkit (Main dependency)](https://werkzeug.palletsprojects.com/en/stable/)
