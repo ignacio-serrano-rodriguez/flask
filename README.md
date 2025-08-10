@@ -16,9 +16,12 @@
   - `flask run --debug`
 
     Starts the Flask development server with debug mode enabled. Debug mode provides:
-    - Automatic reloading when code changes
-    - Detailed error messages in the browser
-    - Interactive debugger for troubleshooting
+    - **Automatic reloading**: Server restarts automatically when you save code changes
+    - **Detailed error pages**: Shows full stack traces and exact error locations in the browser
+    - **Interactive debugger**: Click on traceback lines to open a Python console (requires PIN)
+    - **Enhanced logging**: More verbose output in the terminal
+    
+    **Security Warning**: Never use debug mode in production! The interactive debugger allows code execution.
 
 ## Official Documentation
 
