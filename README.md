@@ -1,6 +1,6 @@
 # Flask
 
-## Useful commands
+## 1. Useful commands
 
   - `flask --app "filename".py run`
 
@@ -23,7 +23,54 @@
     
     **Security Warning**: Never use debug mode in production! The interactive debugger allows code execution.
 
-## Official Documentation
+## 2. API Debugging Tool
+
+### HTTP POST Method
+
+#### Headers
+- **Content-Type**: `application/x-www-form-urlencoded`
+
+#### Body Configuration
+- Select **Body** tab
+- Choose **x-www-form-urlencoded**
+- Add key-value pairs for form fields
+
+## 3. Deploying to Production
+
+- [Official Documentation](https://flask.palletsprojects.com/en/stable/deploying/)
+- [Source](https://www.reddit.com/r/flask/comments/1jcdaux/finally_deployed_my_flask_app_and_wow_i_was_not/)
+
+  #### Production Server Requirements
+  - **Don't use Flask's built-in server** in production 
+    - install **Gunicorn** or similar WSGI server
+  - Flask's development server (`flask run`) is only for local development
+
+  #### Security & Configuration
+  - **Never hardcode API keys** 
+    - use environment variables instead
+  - **Check your code** before pushing to GitHub to avoid exposing secrets
+  - Use `.env` files locally and proper environment configuration in production
+
+  #### Database Management
+  - **Properly close database connections** to prevent memory leaks
+  - Use **SQLAlchemy's connection pooling** for better performance under load
+  - Monitor your database connections in production
+
+  #### Development Tools
+  - **Docker is essential**, not overkill 
+    - simplifies deployment with `docker-compose up`
+  - **Flask-CORS** quickly fixes cross-origin request issues in APIs
+
+  #### Quick Deployment Checklist
+  - Replace Flask dev server with Gunicorn
+  - Move all secrets to environment variables
+  - Configure proper database connection handling
+  - Set up Docker containers
+  - Configure CORS if building an API
+
+  **Bottom line**: What works locally often breaks in production. Plan for proper production infrastructure from the start!
+
+## 4. Official Documentation
 
 - [Installation](https://flask.palletsprojects.com/en/stable/installation/)
 
@@ -43,8 +90,6 @@
 - [Development Server](https://flask.palletsprojects.com/en/stable/server/)
 
 - [API Reference](https://flask.palletsprojects.com/en/stable/#api-reference)
-
-- [Deploying to Production](https://flask.palletsprojects.com/en/stable/deploying/)
 
 - More
 
