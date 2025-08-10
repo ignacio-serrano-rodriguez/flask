@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import url_for
+# from flask import url_for
 from flask import render_template
 from flask import request
 from markupsafe import escape
@@ -11,11 +11,11 @@ def index():
     return 'The index page'
 
 @app.route('/post/<int:post_id>/')
-def post_post_id(post_id):
+def post_post_id(post_id: str):
     return f'Post: {post_id}'
 
 @app.route('/path/<path:subpath>/')
-def path_subpath(subpath):
+def path_subpath(subpath: str):
     return f'Subpath: {escape(subpath)}'
 
 @app.route('/projects/')
@@ -27,7 +27,7 @@ def about():
     return 'The about page'
 
 @app.route('/user/<username>/')
-def user_username(username):
+def user_username(username: str):
     return f'{username}\'s profile'
 
 # with app.test_request_context():
@@ -36,13 +36,13 @@ def user_username(username):
 #     print(url_for('login', next='/'))
 #     print(url_for('user_username', username='John Doe'))
     
-def valid_login(username, password):
+def valid_login(username: str, password: str):
     valid = False
     if username == password:
         valid = True
     return(valid)
     
-def log_the_user_in(username):
+def log_the_user_in(username: str):
     return render_template('hello.html', person=username)
     
     
@@ -67,11 +67,11 @@ def login() -> str:
         password: str = request.form.get('password', '')
         
         if not username or not password:
-            error = "Valid username and password are required"
+            error = 'Valid username and password are required'
         elif valid_login(username, password):
             return log_the_user_in(username)
         else:
-            error = "Invalid username or password"
+            error = 'Invalid username or password'
             
     return render_template('login.html', error=error)
 
@@ -79,5 +79,5 @@ def login() -> str:
 
 @app.route('/hello/')
 @app.route('/hello/<name>/')
-def hello(name=None):
+def hello(name:str=''):
     return render_template('hello.html', person=name)
