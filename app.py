@@ -59,18 +59,19 @@ def log_the_user_in(username):
 
 # Option 2
 @app.route('/login/', methods=['GET', 'POST'])
-def login():
-    error = None
+def login() -> str:
+    error: str | None = None
     
     if request.method == 'POST':
-        if 'username' not in request.form or 'password' not in request.form:
-            error = 'Username and password are required'
-        elif not request.form['username'] or not request.form['password']:
-            error = 'Username and password cannot be empty'
-        elif valid_login(request.form['username'], request.form['password']):
-            return log_the_user_in(request.form['username'])
+        username: str = request.form.get('username', '')
+        password: str = request.form.get('password', '')
+        
+        if not username or not password:
+            error = "Valid username and password are required"
+        elif valid_login(username, password):
+            return log_the_user_in(username)
         else:
-            error = 'Invalid username or password'
+            error = "Invalid username or password"
             
     return render_template('login.html', error=error)
 
